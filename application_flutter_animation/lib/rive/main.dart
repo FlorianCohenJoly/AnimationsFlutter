@@ -4,10 +4,10 @@ import 'package:application_flutter_animation/rive/play_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const RivePage());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class RivePage extends StatelessWidget {
+  const RivePage({Key? key}) : super(key: key);
 
   static const String _title = 'Flutter Rive';
 
