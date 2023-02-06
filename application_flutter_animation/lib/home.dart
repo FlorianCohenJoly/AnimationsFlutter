@@ -3,6 +3,9 @@ import 'package:application_flutter_animation/animation/exemple.dart';
 import 'package:application_flutter_animation/lotties/lotties.dart';
 import 'package:application_flutter_animation/paint/main.dart';
 import 'package:application_flutter_animation/rive/main.dart';
+import 'package:application_flutter_animation/exemple_skeleton.dart';
+import 'package:application_flutter_animation/widget_animation/animated_list.dart';
+import 'package:application_flutter_animation/widget_animation/hero.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -132,7 +135,7 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const ExempleLottie(),
+                            builder: (context) => const AnimatedListSample(),
                           ),
                         );
                       },
@@ -142,7 +145,47 @@ class HomePage extends StatelessWidget {
                         ),
                         primary: const Color.fromARGB(255, 109, 148, 179),
                       ),
-                      child: const Text('Commencer'),
+                      child: const Text('Animation de liste'),
+                    ),
+                  ),
+                  Container(
+                    color: Colors.green[100],
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HeroExample(),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        textStyle: const TextStyle(
+                          fontSize: 18,
+                        ),
+                        primary: const Color.fromARGB(255, 109, 148, 179),
+                      ),
+                      child: const Text('Hero Animation'),
+                    ),
+                  ),
+                  Container(
+                    color: Colors.green[100],
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExempleSkeleton(),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        textStyle: const TextStyle(
+                          fontSize: 18,
+                        ),
+                        primary: const Color.fromARGB(255, 109, 148, 179),
+                      ),
+                      child: const Text('Exemple skeleton'),
                     ),
                   ),
                 ],
